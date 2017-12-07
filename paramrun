@@ -177,7 +177,7 @@ if [ "$LAUNCHER_SCHED" == "dynamic" ]; then
         disown $LAUNCHER_DYN_PID
         sleep 1s  
     fi
-    if ! ps -p $! >/dev/null 2>/dev/null
+    if ! ps -p $LAUNCHER_DYN_PID >/dev/null 2>/dev/null
     then
       if [ $RETRY -ne 10 ]
       then
